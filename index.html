@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test-drive-check</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: grid; place-items: center; height: 100vh; margin: 0; }
+    button { font-size: 1.25rem; padding: .5rem 1rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Counter</h1>
+    <p>Count: <span id="count">0</span></p>
+    <button id="inc">+1</button>
+    <button id="reset">Reset</button>
+  </main>
+  <script>
+    let count = 0;
+    const el = document.getElementById('count');
+    document.getElementById('inc').onclick = () => { count++; el.textContent = count; };
+    document.getElementById('reset').onclick = () => { count = 0; el.textContent = count; };
+  </script>
+</body>
+</html>
